@@ -12,3 +12,8 @@ data_abertura datetime default current_timestamp,
 primary key(id)
 );
 
+
+
+https://hhsxpjvlwgzmmfasbvht.supabase.co
+
+sb_publishable_Z8VfJjr7v-G7BJL2GqwEow_hQhNGJy_
