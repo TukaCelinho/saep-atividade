@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>ConnectTI - Sistema de Chamados</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>ConnectTI - Gerenciamento de Chamados</h1>
+
+  <form id="form-chamado">
+    <h2 id="form-titulo">Novo Chamado</h2>
+    <input type="hidden" id="chamado-id">
+    
+    <label>Solicitante:</label>
+    <input type="text" id="solicitante" required>
+
+    <label>Categoria:</label>
+    <select id="categoria" required>
+      <option value="">Selecione...</option>
+      <option value="Hardware">Hardware</option>
+      <option value="Software">Software</option>
+      <option value="Redes">Redes</option>
+    </select>
+
+    <label>Prioridade:</label>
+    <select id="prioridade" required>
+      <option value="Baixa">Baixa</option>
+      <option value="Média">Média</option>
+      <option value="Alta">Alta</option>
+    </select>
+
+    <label id="label-status" style="display:none;">Status:</label>
+    <select id="status" style="display:none;">
+      <option value="Aberto">Aberto</option>
+      <option value="Em atendimento">Em atendimento</option>
+      <option value="Concluído">Concluído</option>
+    </select>
+
+    <label>Descrição:</label>
+    <textarea id="descricao" required></textarea>
+
+    <button type="submit">Salvar Chamado</button>
+    <button type="button" id="btn-cancelar" style="display:none;" onclick="limparFormulario()">Cancelar Edição</button>
+  </form>
+
+  <h2>Lista de Chamados</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Solicitante</th>
+        <th>Categoria</th>
+        <th>Prioridade</th>
+        <th>Status</th>
+        <th>Abertura</th>
+        <th>Descrição</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody id="tabela-corpo"></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
